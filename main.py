@@ -12,7 +12,7 @@ print(time_string)
 
 timestamp = int(time.time()) - 900  # current Unix timestamp minus time in seconds for retrieving transactions
 value = "500000"  # minimum USD value of transactions returned
-currency_code = "eth"
+currency_code = "btc"
 
 transactions = requests.get(
     f'https://api.whale-alert.io/v1/transactions?api_key={api_key}&min_value={value}&start={timestamp}&currency={currency_code}')
